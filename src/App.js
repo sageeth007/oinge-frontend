@@ -26,24 +26,42 @@ function App() {
 export default App; */
 
 ////////////////////////////////////////////////////////////
-///copied from chatGPT
 import React, { useEffect, useState } from 'react';
-import './App.css';
+import { Helmet } from 'react-helmet';
+import RegistrationForm from './RegistrationForm'; 
+import LoginForm from './LoginForm';
+import './AppStyle.css';
+// import './App.css';
+import './style.css';
 
 function App() {
-  const [message, setMessage] = useState('');
+  // const [message, setMessage] = useState('');
 
-  useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/`)
-      .then((response) => response.text())
-      .then((message) => setMessage(message));
-  }, []);
+  // useEffect(() => {
+  //   fetch(`${process.env.REACT_APP_API_URL}/`)
+  //     .then((response) => response.text())
+  //     .then((message) => setMessage(message));
+  // }, []);
 
+  // return (
+  //   <div className="App">
+  //     <header className="App-header">
+  //       <p>{message}</p>
+  //     </header>
+  //   </div>
+  // );
+  return (
+    <div className="login-page">
+      <h2>Welcome to your Entrepreneurial community</h2>
+      <LoginForm />
+    </div>
+  );
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <p>{message}</p>
-      </header>
+      <Helmet>
+        <title>User Registration</title> </Helmet>
+      <RegistrationForm />
     </div>
   );
 }
