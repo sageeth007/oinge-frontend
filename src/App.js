@@ -33,6 +33,7 @@ import LoginForm from './LoginForm';
 import './AppStyle.css';
 // import './App.css';
 import './style.css';
+import logo from './logo.png';
 
 function App() {
   // const [message, setMessage] = useState('');
